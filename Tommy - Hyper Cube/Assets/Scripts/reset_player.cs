@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class reset_player : MonoBehaviour
 {
     public string scene_name;
-
     private void Start()
     {
         if(scene_name == "")
