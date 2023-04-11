@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/player_movement.cs"
 "Assets/Scripts/reset_player.cs"
+"Assets/Scripts/rotate_bar.cs"
 -langversion:9.0
 
 /deterministic
