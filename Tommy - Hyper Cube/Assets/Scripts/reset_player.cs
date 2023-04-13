@@ -13,6 +13,10 @@ public class reset_player : MonoBehaviour
         {
             scene_name = SceneManager.GetActiveScene().name;
         }
+/*        else if(scene_name == "goal")
+        {
+            scene_name = SceneManager.GetActiveScene().name;
+        }*/
     }
     private void OnCollisionEnter(Collision collision)
     {
