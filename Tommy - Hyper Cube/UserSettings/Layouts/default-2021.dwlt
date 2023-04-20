@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 97
+  controlID: 100
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 58
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 59
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,13 +317,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Student\Documents\Tommy Projects\Hyper-Cube\Tommy -
     Hyper Cube
@@ -331,20 +331,20 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 585b0000
-    m_LastClickedID: 23384
-    m_ExpandedIDs: 00000000485b000000ca9a3b
+    m_SelectedIDs: 245b0000
+    m_LastClickedID: 23332
+    m_ExpandedIDs: 000000001c5b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: Materials
+      m_OriginalName: Materials
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23382
+      m_UserData: 23330
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000485b0000
+    m_ExpandedIDs: 000000001c5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -489,9 +489,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 86beffffdabeffff84faffffe8faffffeafaffffa45a0000
+      m_SelectedIDs: e2b4ffff
+      m_LastClickedID: -19230
+      m_ExpandedIDs: 5eb5ffffd8b8ffff4cbaffff38beffff32c2ffffb6c3ffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -773,9 +773,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 17.927765, y: -12.862233, z: 94.267}
+    m_Target: {x: 54.498146, y: -68.62343, z: 48.605392}
     speed: 2
-    m_Value: {x: 17.927765, y: -12.862233, z: 94.267}
+    m_Value: {x: 54.498146, y: -68.62343, z: 48.605392}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -822,13 +822,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08945246, y: -0.10112437, z: 0.003548422, w: -0.9918052}
+    m_Target: {x: -0.35240296, y: -0.35815206, z: 0.14220256, w: -0.8539677}
     speed: 2
-    m_Value: {x: -0.09084727, y: -0.102508046, z: 0.00383342, w: -0.9905676}
+    m_Value: {x: -0.35355312, y: -0.35631105, z: 0.14207272, w: -0.85314584}
   m_Size:
-    m_Target: 52.792416
+    m_Target: 54.944874
     speed: 2
-    m_Value: 52.792416
+    m_Value: 54.944874
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -6,13 +6,38 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
 
+    public float control_speed;
     public float speed;
+    public float slide;
     public Rigidbody rb;
+
+    void Slide()
+    {
+        if (Input.GetKeyUp("w")) // up
+        {
+            rb.AddForce(transform.up * slide, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyUp("a")) // left
+        {
+            rb.AddForce(transform.right * -slide, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyUp("s")) // down
+        {
+            rb.AddForce(transform.up * -slide, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyUp("d")) // right
+        {
+            rb.AddForce(transform.right * slide, ForceMode.Impulse);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(transform.forward * speed, ForceMode.Impulse);
+        //rb.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 
     // Update is called once per frame
@@ -21,33 +46,34 @@ public class player_movement : MonoBehaviour
 
         // moves player forward on the Z axis
 
-        transform.Translate(transform.forward * speed * Time.deltaTime);
-        //rb.AddForce(transform.forward * speed, ForceMode.Force);
+        transform.Translate(transform.forward * control_speed * Time.deltaTime);
 
         // Movement 
 
-        if (Input.GetKeyDown("w")) // up
+        if (Input.GetKey("w")) // up
         {
-            //transform.Translate(transform.up * speed * Time.deltaTime);
-            rb.AddForce(transform.up * speed, ForceMode.Impulse);
+            transform.Translate(transform.up * control_speed * Time.deltaTime);
+            //rb.AddForce(transform.up * speed, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown("a")) // left
+        if (Input.GetKey("a")) // left
         {
-            //transform.Translate(transform.right * -speed * Time.deltaTime);
-            rb.AddForce(transform.right * -speed, ForceMode.Impulse);
+            transform.Translate(transform.right * -control_speed * Time.deltaTime);
+            //rb.AddForce(transform.right * -speed, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown("s")) // down
+        if (Input.GetKey("s")) // down
         {
-            //transform.Translate(transform.up * -speed * Time.deltaTime);
-            rb.AddForce(transform.up * -speed, ForceMode.Impulse);
+            transform.Translate(transform.up * -control_speed * Time.deltaTime);
+            //rb.AddForce(transform.up * -speed, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown("d")) // right
+        if (Input.GetKey("d")) // right
         {
-            //transform.Translate(transform.right * speed * Time.deltaTime);
-            rb.AddForce(transform.right * speed, ForceMode.Impulse);
+            transform.Translate(transform.right * control_speed * Time.deltaTime);
+            //rb.AddForce(transform.right * speed, ForceMode.Impulse);
         }
+
+        Slide();
     }
 }
