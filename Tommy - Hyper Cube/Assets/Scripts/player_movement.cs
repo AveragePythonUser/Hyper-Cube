@@ -11,6 +11,8 @@ public class player_movement : MonoBehaviour
     public float slide;
     public Rigidbody rb;
 
+    //public Vector3 move_direction = GameObject.;
+
     void Slide()
     {
         if (Input.GetKeyUp("w")) // up
@@ -46,7 +48,9 @@ public class player_movement : MonoBehaviour
 
         // moves player forward on the Z axis
 
-        transform.Translate(transform.forward * control_speed * Time.deltaTime);
+        //transform.Translate(transform.forward * control_speed * Time.deltaTime);
+        transform.Translate(Camera.current.transform.forward * control_speed * Time.deltaTime);
+        Debug.Log(transform.forward);
 
         // Movement 
 
