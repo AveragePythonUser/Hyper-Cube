@@ -49,14 +49,15 @@ public class player_movement : MonoBehaviour
         // moves player forward on the Z axis
 
         //transform.Translate(transform.forward * control_speed * Time.deltaTime);
-        transform.Translate(Camera.current.transform.forward * control_speed * Time.deltaTime);
-        Debug.Log(transform.forward);
+        transform.Translate(transform.forward * control_speed * Time.deltaTime);
+
+        //transform.position = transform.position + cam.transform.forward * speed * Time.deltaTime; //works :')
 
         // Movement 
 
         if (Input.GetKey("w")) // up
         {
-            transform.Translate(transform.up * control_speed * Time.deltaTime);
+            transform.Translate(transform.up * control_speed * Time.deltaTime); 
             //rb.AddForce(transform.up * speed, ForceMode.Impulse);
         }
 
