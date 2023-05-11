@@ -354,12 +354,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/map_rotate_test.cs"
 "Assets/Scripts/player_movement.cs"
 "Assets/Scripts/reset_player.cs"
 "Assets/Scripts/rotate_bar.cs"
 "Assets/Scripts/rotate_map.cs"
-"Assets/Scripts/slerp_test.cs"
 -langversion:9.0
 
 /deterministic
