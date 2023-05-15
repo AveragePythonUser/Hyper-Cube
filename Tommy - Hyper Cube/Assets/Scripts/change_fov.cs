@@ -6,13 +6,21 @@ public class change_fov : MonoBehaviour
 {
     public float change_time;
     public float target_FOV;
-    private float starting_FOV = Camera.main.fieldOfView;
+    private float starting_FOV;
     private bool changing_FOV = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(time_start());
+        if (reset_player.momentum == false)
+        {
+            starting_FOV = Camera.main.fieldOfView;
+            StartCoroutine(time_start());
+        }
+        else
+        {
+            Camera.main.fieldOfView = target_FOV;
+        }
     }
 
     // Update is called once per frame

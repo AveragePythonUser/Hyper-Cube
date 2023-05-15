@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class reset_player : MonoBehaviour
 {
     public string scene_name;
+    public bool goal;
+    public static bool momentum;
     private void Start()
     {
         if(scene_name == "")
@@ -23,6 +25,14 @@ public class reset_player : MonoBehaviour
         
         if(collision.gameObject.CompareTag("Player"))
         {
+            if (goal == true)
+            {
+                momentum = true;
+            }
+            else
+            {
+                momentum = false;
+            }
             SceneManager.LoadScene(scene_name);
         }
     }
