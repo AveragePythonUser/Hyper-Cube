@@ -49,7 +49,7 @@ public class player_movement : MonoBehaviour
         // moves player forward on the Z axis
 
         //transform.Translate(transform.forward * control_speed * Time.deltaTime);
-        transform.Translate(transform.forward * control_speed * Time.deltaTime);
+        transform.Translate(transform.forward * speed * Time.deltaTime);
 
         //transform.position = transform.position + cam.transform.forward * speed * Time.deltaTime; //works :')
 
