@@ -20,6 +20,8 @@ public class rotate_map : MonoBehaviour
         {
             map.transform.RotateAround(point.transform.position, vector_axis, (degrees / rotate_time) * Time.deltaTime);
         }
+
+        Debug.Log()
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -33,6 +35,11 @@ public class rotate_map : MonoBehaviour
     {
         rotating = true;
         yield return new WaitForSeconds(rotate_time);
+        if (vector_axis == new Vector3(1, 0, 0))
+        {
+            map.transform.rotation *= Quaternion.Euler(0, 1, 1);
+        }
+
         rotating = false;
 
     }

@@ -19,7 +19,11 @@ public class change_fov : MonoBehaviour
         }
         else
         {
-            Camera.main.fieldOfView = target_FOV;
+            //Camera.main.fieldOfView = target_FOV;
+            starting_FOV = target_FOV - 10;
+            Camera.main.fieldOfView = starting_FOV;
+            change_time = 1;
+            StartCoroutine(time_start());
         }
     }
 
@@ -35,7 +39,7 @@ public class change_fov : MonoBehaviour
     IEnumerator time_start()
     {
         changing_FOV = true;
-        yield return new WaitForSeconds(change_time);
+        yield return new WaitForSeconds(change_time); 
         changing_FOV = false;
     }
 }
