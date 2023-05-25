@@ -20,8 +20,6 @@ public class rotate_map : MonoBehaviour
         {
             map.transform.RotateAround(point.transform.position, vector_axis, (degrees / rotate_time) * Time.deltaTime);
         }
-
-        Debug.Log()
     }
     private void OnTriggerEnter(Collider other)
     {

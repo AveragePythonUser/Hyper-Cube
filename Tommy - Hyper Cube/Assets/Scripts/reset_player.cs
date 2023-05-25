@@ -9,6 +9,7 @@ public class reset_player : MonoBehaviour
     public string scene_name;
     public bool goal;
     public static bool momentum;
+
     private void Start()
     {
         if(scene_name == "")
@@ -32,7 +33,9 @@ public class reset_player : MonoBehaviour
             else
             {
                 momentum = false;
+                PlayerPrefs.SetFloat("player_resets", PlayerPrefs.GetFloat("player_resets") + 1);
             }
+            Debug.Log(PlayerPrefs.GetFloat("player_resets"));
             SceneManager.LoadScene(scene_name);
         }
     }
