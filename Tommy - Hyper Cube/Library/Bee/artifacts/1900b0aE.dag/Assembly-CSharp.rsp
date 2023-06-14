@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/change_fov.cs"
 "Assets/Scripts/main_menu_manager.cs"
+"Assets/Scripts/menu_cube_rotate.cs"
 "Assets/Scripts/object_button.cs"
 "Assets/Scripts/player_movement.cs"
 "Assets/Scripts/reset_player.cs"
