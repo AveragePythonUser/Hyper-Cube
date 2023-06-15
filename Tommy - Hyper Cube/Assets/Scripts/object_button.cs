@@ -8,8 +8,10 @@ public class object_button : MonoBehaviour
     public main_menu_manager main_menu_manager;
 
     private bool mouse_on;
+    private bool enter;
     public float direction;
     private float size = 0.5f;
+    private float scale;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,9 @@ public class object_button : MonoBehaviour
     {
         if (mouse_on == true)
         {
-            transform.localScale += new Vector3(size * direction, size * direction, size * direction);
+            scale = 1f * direction;
+            Debug.Log(scale);
+            transform.localScale += new Vector3(scale, scale, scale);
         }
     }
 
@@ -33,11 +37,12 @@ public class object_button : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (mouse_on == false)
+        if (mouse_on == false && enter == false)
         {
             Debug.Log("mouse over");
             direction = 1;
-            StartCoroutine(hover());
+            enter = true;
+            StartCoroutine(hover("enter"));
         }
     }
 
@@ -46,11 +51,11 @@ public class object_button : MonoBehaviour
         if (mouse_on == false)
         {
             direction = -1;
-            StartCoroutine(hover());
+            StartCoroutine(hover("exit"));
         }
     }
 
-    IEnumerator hover()
+    IEnumerator hover(string type)
     {
         mouse_on = true;
         yield return new WaitForSeconds(0.3f);
