@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class menu_cube_rotate : MonoBehaviour
 {
+
+    //
+    // Rotates the cubes you see in the menu
+    // probably could have merged this with the
+    // object button script but do I really feel like doing that (no)
+    //
     
     public static float speed;
 

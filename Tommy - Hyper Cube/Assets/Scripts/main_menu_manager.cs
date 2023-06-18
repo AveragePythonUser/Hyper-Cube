@@ -10,6 +10,7 @@ public class main_menu_manager : MonoBehaviour
     public string scene_name;
 
     public GameObject main_panel;
+    private GameObject selected_panel;
     public GameObject main_menu_cubes;
     public GameObject difficulty_panel;
 
@@ -29,11 +30,11 @@ public class main_menu_manager : MonoBehaviour
         main_panel.SetActive(false);
         reset_panels();
 
-        if (panel_name == "main_panel")
+        if (panel_name == "Main Panel")
         {
             main_panel.SetActive(true);
         }
-        if (panel_name == "difficulty_panel")
+        if (panel_name == "Difficulty Panel")
         {
             difficulty_panel.SetActive(true);
             main_menu_cubes.SetActive(false);
