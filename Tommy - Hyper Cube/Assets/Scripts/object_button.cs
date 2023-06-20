@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //using static main_menu_manager;
 
 public class object_button : MonoBehaviour
@@ -15,7 +16,8 @@ public class object_button : MonoBehaviour
 
     private bool mouse_on;
     private float scale;
-    public string panel_change;
+    public GameObject panel_change;
+    public string scene_name;
     public float smooth_time;
     private float vel;
     public float scale_ratio = 1.25f;
@@ -50,7 +52,15 @@ public class object_button : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("mouse down");
-        main_menu_manager.change_panel(panel_change);
+        mouse_on = false;
+        if (scene_name != "")
+        {
+            SceneManager.LoadScene(scene_name);
+        }
+        else
+        {
+            main_menu_manager.change_panel(panel_change);
+        }
     }
 
     void OnMouseEnter()
