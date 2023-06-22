@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -385,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &194068988
 Camera:
   m_ObjectHideFlags: 0
@@ -1386,8 +1386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_menu_manager: {fileID: 1757125450}
+  difficulty_name: hard
   panel_change: {fileID: 0}
-  scene_name: 
+  scene_name: level_1
   smooth_time: 0.04
   scale_ratio: 1.25
 --- !u!65 &755148767
@@ -3003,7 +3004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.6
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -3347,8 +3348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_menu_manager: {fileID: 1757125450}
+  difficulty_name: medium
   panel_change: {fileID: 0}
-  scene_name: 
+  scene_name: level_1
   smooth_time: 0.04
   scale_ratio: 1.25
 --- !u!65 &1862160509
@@ -4098,6 +4100,10 @@ PrefabInstance:
     - target: {fileID: 8752226567208093920, guid: dc768c3af25c5524ca2ef51c13190c01, type: 3}
       propertyPath: scene_name
       value: level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752226567208093920, guid: dc768c3af25c5524ca2ef51c13190c01, type: 3}
+      propertyPath: difficulty_name
+      value: normal
       objectReference: {fileID: 0}
     - target: {fileID: 8752226567208093920, guid: dc768c3af25c5524ca2ef51c13190c01, type: 3}
       propertyPath: main_menu_manager

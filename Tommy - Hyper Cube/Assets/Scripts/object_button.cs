@@ -16,6 +16,7 @@ public class object_button : MonoBehaviour
 
     private bool mouse_on;
     private float scale;
+    public string difficulty_name;
     public GameObject panel_change;
     public string scene_name;
     public float smooth_time;
@@ -23,6 +24,7 @@ public class object_button : MonoBehaviour
     public float scale_ratio = 1.25f;
     private float max;
     private float min;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +54,12 @@ public class object_button : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("mouse down");
+        
         mouse_on = false;
+
         if (scene_name != "")
         {
-            SceneManager.LoadScene(scene_name);
+            change_scene();
         }
         else
         {
@@ -71,5 +75,31 @@ public class object_button : MonoBehaviour
     void OnMouseExit()
     {
         mouse_on = false;
+    }
+
+    void change_scene()
+    {
+        if (difficulty_name == "normal")
+        {
+            PlayerPrefs.SetFloat("max_resets", -1f);
+            PlayerPrefs.SetString("difficulty", "normal");
+            Debug.Log("difficulty_name normal");
+        }
+        else if (difficulty_name == "medium")
+        {
+            PlayerPrefs.SetFloat("max_resets", 3f);
+            PlayerPrefs.SetString("difficulty", "medium");
+            Debug.Log("difficulty_name medium");
+        }
+        else if (difficulty_name == "hard")
+        {
+            PlayerPrefs.SetFloat("max_resets", 1f);
+            PlayerPrefs.SetString("difficulty", "hard");
+            Debug.Log("difficulty_name hard");
+        }
+
+        PlayerPrefs.SetFloat("player_resets", 0);
+
+        SceneManager.LoadScene(scene_name);
     }
 }

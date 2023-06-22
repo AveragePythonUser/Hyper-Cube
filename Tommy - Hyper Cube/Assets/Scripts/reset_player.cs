@@ -35,7 +35,13 @@ public class reset_player : MonoBehaviour
                 momentum = false;
                 PlayerPrefs.SetFloat("player_resets", PlayerPrefs.GetFloat("player_resets") + 1);
             }
-            Debug.Log(PlayerPrefs.GetFloat("player_resets"));
+            if (PlayerPrefs.GetFloat("player_resets") == PlayerPrefs.GetFloat("max_resets"))
+            {
+                scene_name = "game_over";
+                PlayerPrefs.SetFloat("player_resets", 0);
+            }
+            Debug.Log("max_resets: " + PlayerPrefs.GetFloat("max_resets"));
+            Debug.Log("current resets" + PlayerPrefs.GetFloat("player_resets"));
             SceneManager.LoadScene(scene_name);
         }
     }
