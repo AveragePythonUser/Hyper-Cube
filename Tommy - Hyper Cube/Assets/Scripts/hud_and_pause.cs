@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class hud_and_pause : MonoBehaviour
 {
 
     public GameObject HUD;
     public GameObject pause_menu;
+    public GameObject menu_button; // pause button
     public GameObject controls;
+    public Text reset_text;
+    public GameObject text;
+    private string remaining_resets;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +21,21 @@ public class hud_and_pause : MonoBehaviour
         controls.SetActive(false);
     }
 
+    void Update()
+    {
+        if (PlayerPrefs.GetString("difficulty") == "normal")
+        {
+            text.SetActive(false);
+        }
+        else
+        {
+            remaining_resets = (PlayerPrefs.GetFloat("max_resets") - PlayerPrefs.GetFloat("player_resets")).ToString();
+            reset_text.text = "Resets: " + remaining_resets;
+        }
+    }
     public void pause_button()
     {
+        Debug.Log("Pause Button Pressed");
         pause_game();
         HUD.SetActive(false);
         pause_menu.SetActive(true);
