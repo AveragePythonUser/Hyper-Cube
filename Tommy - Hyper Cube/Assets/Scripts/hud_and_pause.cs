@@ -32,12 +32,25 @@ public class hud_and_pause : MonoBehaviour
             remaining_resets = (PlayerPrefs.GetFloat("max_resets") - PlayerPrefs.GetFloat("player_resets")).ToString();
             reset_text.text = "Resets: " + remaining_resets;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pause_menu.active == true && controls.active == false)
+            {
+                resume_button();
+            }
+            else
+            {
+                pause_button();
+            }
+        }
     }
     public void pause_button()
     {
         Debug.Log("Pause Button Pressed");
         pause_game();
         HUD.SetActive(false);
+        controls.SetActive(false);
         pause_menu.SetActive(true);
     }
 
@@ -45,6 +58,7 @@ public class hud_and_pause : MonoBehaviour
     {
         resume_game();
         pause_menu.SetActive(false);
+        controls.SetActive(false);
         HUD.SetActive(true);
     }
 

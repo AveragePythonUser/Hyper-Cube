@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class move_bar : MonoBehaviour
@@ -16,6 +17,7 @@ public class move_bar : MonoBehaviour
 
     void Start() // c sharp not python. dont put : at the end of functions worst mistake of my life
     {
+        speed = speed * 500;
         if (rotate_direction == "x")
         {
             x_move = speed * modifier;
@@ -34,10 +36,9 @@ public class move_bar : MonoBehaviour
 
     void Update()
     {
-        speed *= Time.deltaTime;
         if (moving == true)
         {
-            transform.position += new Vector3(x_move, y_move, z_move);
+            transform.position += new Vector3(x_move * Time.deltaTime, y_move * Time.deltaTime, z_move * Time.deltaTime);
         }
     }
 
