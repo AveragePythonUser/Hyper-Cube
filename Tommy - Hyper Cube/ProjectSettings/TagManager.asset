@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Map
+  - level_select_cube
   layers:
   - Default
   - TransparentFX

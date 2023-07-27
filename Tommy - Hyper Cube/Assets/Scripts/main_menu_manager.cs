@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 //using static object_button;
 
 public class main_menu_manager : MonoBehaviour
@@ -14,12 +16,14 @@ public class main_menu_manager : MonoBehaviour
     public GameObject main_menu_cubes;
     public GameObject difficulty_panel;
     public GameObject credits_panel;
+    public GameObject level_select_panel;
 
     public void Start()
     {
         
         difficulty_panel.SetActive(false);
         credits_panel.SetActive(false);
+        level_select_panel.SetActive(false);
 
     }
 
@@ -27,6 +31,7 @@ public class main_menu_manager : MonoBehaviour
     {
         difficulty_panel.SetActive(false);
         credits_panel.SetActive(false);
+        level_select_panel.SetActive(false);
     }
 
     public void change_panel(GameObject panel_name)
@@ -47,8 +52,8 @@ public class main_menu_manager : MonoBehaviour
         // }
     }
 
-/*    public void load_scene(string scene_name)
-    {
-        SceneManager.LoadScene(scene_name);
-    }*/
-}
+        /*    public void load_scene(string scene_name)
+            {
+                SceneManager.LoadScene(scene_name);
+            }*/
+    }

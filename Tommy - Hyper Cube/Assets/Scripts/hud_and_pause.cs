@@ -35,7 +35,7 @@ public class hud_and_pause : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pause_menu.active == true && controls.active == false)
+            if (pause_menu.activeSelf == true && controls.activeSelf == false)
             {
                 resume_button();
             }

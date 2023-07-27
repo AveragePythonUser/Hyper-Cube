@@ -358,6 +358,7 @@
 "Assets/Scripts/hud_and_pause.cs"
 "Assets/Scripts/main_menu_manager.cs"
 "Assets/Scripts/menu_cube_rotate.cs"
+"Assets/Scripts/menu_toggle.cs"
 "Assets/Scripts/move_bar.cs"
 "Assets/Scripts/object_button.cs"
 "Assets/Scripts/player_movement.cs"
