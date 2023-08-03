@@ -13,8 +13,8 @@ public class menu_cube_rotate : MonoBehaviour
     
     public static float speed;
 
-    private float min_speed = 0.3f;
-    private float max_speed = 0.4f;
+    public float min_speed = 0.3f;
+    public float max_speed = 0.4f;
 
     private float x;
     private float y;
