@@ -31,7 +31,7 @@ public class rotate_bar : MonoBehaviour
         StartCoroutine(wait());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (rotating == true)
         {

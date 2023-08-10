@@ -366,6 +366,7 @@
 "Assets/Scripts/reset_player.cs"
 "Assets/Scripts/rotate_bar.cs"
 "Assets/Scripts/rotate_map.cs"
+"Assets/Scripts/win.cs"
 -langversion:9.0
 
 /deterministic
