@@ -13,21 +13,20 @@ public class win : MonoBehaviour
     void Start()
     {
 
-        if (PlayerPrefs.GetString("Difficulty") == "normal")
+        if (PlayerPrefs.GetString("difficulty") == "normal")
+        {
+            reset_text.text = "Resets: " + PlayerPrefs.GetFloat("player_resets").ToString();
+            Debug.Log("normal");
+        }
+        else if (PlayerPrefs.GetString("difficulty") == "medium")
+        {
+            reset_text.text = "Resets: " + PlayerPrefs.GetFloat("player_resets").ToString() + "/3";
+            Debug.Log("medium");
+        }
+        else if (PlayerPrefs.GetString("difficulty") == "hard")
         {
             text.SetActive(false);
+            Debug.Log("hard");
         }
-        else if (PlayerPrefs.GetString("Difficulty") == "medium")
-        {
-            difficulty_resets = "3";
-        }
-        else if (PlayerPrefs.GetString("Difficulty") == "hard")
-        {
-            difficulty_resets = "1";
-        }
-
-        remaining_resets = "/" + (PlayerPrefs.GetFloat("max_resets") - PlayerPrefs.GetFloat("player_resets")).ToString();
-
-        reset_text.text = "Resets: " + remaining_resets + difficulty_resets;
     }
 }
